@@ -72,7 +72,7 @@ let delete_<%= entity.name %> = delete "/<%= baseName %>/<%= pluralize(entity.na
   let db = <%= _.capitalize(entity.name) %>.<%= entity.name %>_init db_name in
   let row = <%= _.capitalize(entity.name) %>.<%= entity.name %>_get_by_id (`Eq (<%= _.capitalize(entity.name) %>.ORMID_<%= entity.name %>.of_int64 id)) db in
   <%= _.capitalize(entity.name) %>.<%= entity.name %>_delete db row;
-  `String "" |> respond'
+  `String "" |> respond' ~code:`No_content
 end
 <% }); %>
 
