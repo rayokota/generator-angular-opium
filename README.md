@@ -2,8 +2,6 @@
 
 A [Yeoman](http://yeoman.io) generator for [AngularJS](http://angularjs.org) and [Opium](https://github.com/rgrinberg/opium).
 
-Note: this generator relies on a version of [ocaml-cohttp](https://github.com/avsm/ocaml-cohttp) greater than 0.10.0, which is not yet available in OPAM.
-
 Opium is an OCaml-based micro-framework.  For AngularJS integration with other micro-frameworks, see https://github.com/rayokota/MicroFrameworkRosettaStone.
 
 ## Installation

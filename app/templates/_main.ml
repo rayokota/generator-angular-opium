@@ -51,7 +51,7 @@ let post_<%= entity.name %> = post "/<%= baseName %>/<%= pluralize(entity.name) 
   let row = <%= _.capitalize(entity.name) %>.<%= entity.name %>_of_json json in
   <%= _.capitalize(entity.name) %>.<%= entity.name %>_save db row;
   row.id <- Some(<%= _.capitalize(entity.name) %>.<%= entity.name %>_id db row |> <%= _.capitalize(entity.name) %>.ORMID_<%= entity.name %>.to_int64);
-  respond (`Json (<%= _.capitalize(entity.name) %>.json_of_<%= entity.name %> row))
+  respond ~code:`Created (`Json (<%= _.capitalize(entity.name) %>.json_of_<%= entity.name %> row))
 end
 
 let put_<%= entity.name %> = put "/<%= baseName %>/<%= pluralize(entity.name) %>/:id" begin fun req ->
