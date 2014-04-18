@@ -6,7 +6,7 @@ Opium is an OCaml-based micro-framework.  For AngularJS integration with other m
 
 ## Installation
 
-Install [Git](http://git-scm.com), [node.js](http://nodejs.org), [OPAM](https://opam.ocaml.org), [Mirage ORM](https://github.com/mirage/orm), and [Opium](https://github.com/rgrinberg/opium).  The development mode also requires [SQLite](http://www.sqlite.org).
+Install [Git](http://git-scm.com), [node.js](http://nodejs.org), and [OPAM](https://opam.ocaml.org), .  The development mode also requires [SQLite](http://www.sqlite.org).
 
 Install Yeoman:
 
@@ -24,6 +24,10 @@ In a new directory, generate the service:
 
     yo angular-opium
 
+Install dependencies ([Mirage ORM](https://github.com/mirage/orm) and [Opium](https://github.com/rgrinberg/opium)).
+
+	opam install orm opium
+	
 Build the service:
 
     corebuild -pkg opium,cow.syntax,orm.syntax main.native
