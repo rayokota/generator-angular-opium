@@ -18,7 +18,7 @@ Install the Angular-Opium generator:
 
 The above prerequisites can be installed to a VM using the [Angular-Opium provisioner](https://github.com/rayokota/provision-angular-opium).
 
-## Creating a Opium service
+## Creating an Opium service
 
 In a new directory, generate the service:
 
