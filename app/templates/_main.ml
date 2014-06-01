@@ -77,7 +77,7 @@ end
 <% }); %>
 
 let _ =
-  App.app
+  App.empty
   |> get_index
   <% _.each(entities, function (entity) { %>
   |> get_<%= pluralize(entity.name) %>
@@ -86,6 +86,6 @@ let _ =
   |> put_<%= entity.name %>
   |> delete_<%= entity.name %><% }); %>
   |> middleware (Middleware_pack.static ~local_path:"./public" ~uri_prefix:"/public")
-  |> App.port 3000
-  |> App.start
+  |> App.command
+  |> Command.run
 
